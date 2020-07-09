@@ -25,13 +25,11 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .thumbnail-slider {
   height: 64px;
   display: flex;
-  overflow: scroll;
-  // margin:20px;
+  overflow-x: scroll;
 }
 
 .thumnail-slider__thumb {

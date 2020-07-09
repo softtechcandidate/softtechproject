@@ -1,33 +1,39 @@
 <template>
-  <div class="home"> 
-    <Navbar></Navbar>
+  <div class="home">
     <GalleryView></GalleryView>
     <FileUploader></FileUploader>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import Navbar from './Navbar';
-import GalleryView from './GalleryView';
-import FileUploader from './FileUploader';
+import { mapActions, mapState } from "vuex";
+import GalleryView from "./GalleryView";
+import FileUploader from "./FileUploader";
 
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String,
+    msg: String
+  },
+  created() {
+    setTimeout(() => {
+      this.fetchImageList();
+    }, 1000);
   },
   computed: {
-    ...mapState(['theData']),   
+    ...mapState(["theData"]),
     computedData() {
       return this.theData;
     }
   },
-  components: { Navbar, GalleryView, FileUploader }
+  methods: {
+    ...mapActions(["fetchImageList"])
+  },
+  components: { GalleryView, FileUploader }
 };
 </script>
 
 <style scoped lang="scss">
-.home { 
+.home {
 }
 </style>

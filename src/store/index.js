@@ -1,25 +1,35 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-
+import GalleryManager from '../serverConnectors/GalleryManager';
 Vue.use(Vuex);
+
+let galleryManager = new GalleryManager();
 
 export default new Vuex.Store({
   state: {
-    imageList : [
-      { large: "https://picsum.photos/512/240/?image=1", thumb: "https://picsum.photos/64/30/?image=1" },
-      { large: "https://picsum.photos/512/240/?image=2", thumb: "https://picsum.photos/64/30/?image=2" },
-      { large: "https://picsum.photos/512/240/?image=3", thumb: "https://picsum.photos/64/30/?image=3" },
-      { large: "https://picsum.photos/512/240/?image=4", thumb: "https://picsum.photos/64/30/?image=4" },
-      { large: "https://picsum.photos/512/240/?image=5", thumb: "https://picsum.photos/64/30/?image=5" },
-      { large: "https://picsum.photos/512/240/?image=6", thumb: "https://picsum.photos/64/30/?image=6" },
-      { large: "https://picsum.photos/512/240/?image=7", thumb: "https://picsum.photos/64/30/?image=7" },
-      { large: "https://picsum.photos/512/240/?image=8", thumb: "https://picsum.photos/64/30/?image=8" },
-      { large: "https://picsum.photos/512/240/?image=9", thumb: "https://picsum.photos/64/30/?image=9" },
-    ]
-  },
-  mutations: {
+    imageList: []
   },
   actions: {
+    fetchImageList({ commit }) {
+      return galleryManager.fetchImages().then(jsonData => {
+        commit("SAVE_IMAGE_LIST", jsonData);
+      });
+    },
+    saveImage({ dispatch }, file) {
+      return galleryManager.saveImage(file).then(() => {
+        return dispatch("fetchImageList");
+      });
+    },
+    saveBase64Image({ dispatch }, base64Data) {
+      return galleryManager.saveBase64Image(base64Data).then(() => {
+        return dispatch("fetchImageList");
+      });
+    }
+  },
+  mutations: {
+    SAVE_IMAGE_LIST(state, jsonData) {
+      state.imageList = jsonData;
+    }
   },
   modules: {
   },

@@ -1,19 +1,19 @@
 <template>
   <div>
     <Navbar></Navbar>
-    <Home msg="Welcome to Your Vue.js App" />
+    <Camera />
   </div>
 </template>
 
 <script>
-import Home from "@/components/Home.vue";
+import Camera from '@/components/Camera.vue';
 import Navbar from "@/components/Navbar";
 
 export default {
-  name: "HomeV",
+  name: 'CameraV',
   components: {
-    Home,
-    Navbar
-  }
+    Camera,
+    Navbar,
+  },
 };
 </script>
