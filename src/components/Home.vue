@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-    <GalleryView></GalleryView>
-    <FileUploader></FileUploader>
+    <h1>Image Gallery</h1>
+    <GalleryView id="galleryView"></GalleryView>
+    <FileUploader id="fileUploader"></FileUploader>
   </div>
 </template>
 
@@ -11,7 +12,7 @@ import GalleryView from './GalleryView.vue';
 import FileUploader from './FileUploader.vue';
 
 export default {
-  name: 'Home', 
+  name: 'Home',
   created() {
     setTimeout(() => {
       this.fetchImageList();
