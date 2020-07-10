@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import Webcam from "webcam-easy";
-import { mapActions } from "vuex";
+import Webcam from 'webcam-easy';
+import { mapActions } from 'vuex';
 
 let webcamElement;
 let canvasElement;
@@ -28,12 +28,12 @@ let snapSoundElement;
 let webcam;
 
 export default {
-  name: "Camera",
+  name: 'Camera',
   props: {},
   data() {
     return {
       snapshotBase64: null,
-      uploadInProgress: false
+      uploadInProgress: false,
     };
   },
   mounted() {
@@ -41,29 +41,29 @@ export default {
   },
   computed: {},
   methods: {
-    ...mapActions(["saveBase64Image"]),
+    ...mapActions(['saveBase64Image']),
     onTakeAPhotoClicked() {
       const picture = webcam.snap();
       this.snapshotBase64 = picture;
       webcam.stop();
     },
     initWebcam() {
-      webcamElement = document.getElementById("webcam");
-      canvasElement = document.getElementById("canvas");
-      snapSoundElement = document.getElementById("snapSound");
+      webcamElement = document.getElementById('webcam');
+      canvasElement = document.getElementById('canvas');
+      snapSoundElement = document.getElementById('snapSound');
       webcam = new Webcam(
         webcamElement,
-        "user",
+        'user',
         canvasElement,
-        snapSoundElement
+        snapSoundElement,
       );
 
       webcam
         .start()
-        .then(result => {
-          console.log("webcam started");
+        .then(() => {
+          console.log('webcam started');
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
         });
     },
@@ -72,11 +72,11 @@ export default {
       this.saveBase64Image(this.snapshotBase64).finally(() => {
         setTimeout(() => {
           this.uploadInProgress = false;
-          alert("Image uploaded successfuly, redirecting to gallery view");
-          this.$router.push({ path: "/" });
+          alert('Image uploaded successfuly, redirecting to gallery view');
+          this.$router.push({ path: '/' });
         }, 2000);
       });
-    }
+    },
   },
   watch: {
     snapshotBase64() {
@@ -87,12 +87,12 @@ export default {
           this.initWebcam();
         });
       }
-    }
+    },
   },
   destroyed() {
     webcam.stop();
   },
-  components: {}
+  components: {},
 };
 </script>
 

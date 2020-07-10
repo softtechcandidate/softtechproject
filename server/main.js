@@ -9,7 +9,7 @@ let http;
 let app;
 const PORT = 8090;
 let galleryManager;
-let storageManager;
+let dataStorageManager;
 
 function main() {
     dataStorageManager = new DataStorageManager();

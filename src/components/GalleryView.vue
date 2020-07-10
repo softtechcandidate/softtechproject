@@ -6,25 +6,22 @@
 </template>
 
 <script>
-import ImageCarousel from "./ImageCarousel";
-import ThumbnailSlider from "./ThumbnailSlider";
-import { mapState } from "vuex";
+import ImageCarousel from './ImageCarousel.vue';
+import ThumbnailSlider from './ThumbnailSlider.vue';
 
 export default {
-  name: "GalleryView",
+  name: 'GalleryView',
   props: {},
-  data: () => {
-    return {
-      selectedSlideIndex: 0
-    };
-  },
+  data: () => ({
+    selectedSlideIndex: 0,
+  }),
   computed: {},
   methods: {
     onThumbSelected(selectionIndex) {
       this.selectedSlideIndex = selectionIndex;
-    }
+    },
   },
-  components: { ThumbnailSlider, ImageCarousel }
+  components: { ThumbnailSlider, ImageCarousel },
 };
 </script>
 

@@ -7,7 +7,7 @@
 
 <script>
 import Camera from '@/components/Camera.vue';
-import Navbar from "@/components/Navbar";
+import Navbar from '@/components/Navbar.vue';
 
 export default {
   name: 'CameraV',

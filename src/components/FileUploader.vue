@@ -22,35 +22,34 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
+import { mapActions } from 'vuex';
 
 export default {
-  name: "GalleryView",
+  name: 'GalleryView',
   props: {},
   data() {
     return {
       file: null,
-      uploadInProgress: false
+      uploadInProgress: false,
     };
   },
   computed: {
     isMobileDevice() {
       return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
+        navigator.userAgent,
       );
     },
     placeholderText() {
       if (this.isMobileDevice) {
-        return "Chose a file from your device";
-      } else {
-        return "Choose a file or drop it here";
+        return 'Chose a file from your device';
       }
-    }
+      return 'Choose a file or drop it here';
+    },
   },
   methods: {
-    ...mapActions(["saveImage"]),
+    ...mapActions(['saveImage']),
     onTakePhotoClicked() {
-      this.$router.push({ path: "camera" });
+      this.$router.push({ path: 'camera' });
     },
     onSubmitFile() {
       this.uploadInProgress = true;
@@ -59,11 +58,11 @@ export default {
           this.uploadInProgress = false;
         }, 1000);
       });
-    }
+    },
   },
-  components: {}
+  components: {},
 };
-</script> 
+</script>
 <style scoped lang="scss">
 .file-uploader {
   padding: 0px 10px 0px 10px;

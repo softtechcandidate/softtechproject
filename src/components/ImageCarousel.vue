@@ -21,30 +21,28 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex';
 
 export default {
-  name: "ImageCarousel",
+  name: 'ImageCarousel',
   props: {
-    selectedSlideIndex: Number
+    selectedSlideIndex: Number,
   },
-  data: () => {
-    return {
-      selectedSlideIndexLocal: 0
-    };
-  },
+  data: () => ({
+    selectedSlideIndexLocal: 0,
+  }),
   created() {
-      this.selectedSlideIndexLocal = this.selectedSlideIndex;
+    this.selectedSlideIndexLocal = this.selectedSlideIndex;
   },
   computed: {
-    ...mapState(["imageList"])
+    ...mapState(['imageList']),
   },
   watch: {
     selectedSlideIndex() {
       this.selectedSlideIndexLocal = this.selectedSlideIndex;
-    }
+    },
   },
-  components: {}
+  components: {},
 };
 </script>
 

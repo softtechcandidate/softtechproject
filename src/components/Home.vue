@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
-import GalleryView from "./GalleryView";
-import FileUploader from "./FileUploader";
+import { mapActions, mapState } from 'vuex';
+import GalleryView from './GalleryView.vue';
+import FileUploader from './FileUploader.vue';
 
 export default {
-  name: "HelloWorld",
+  name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
   },
   created() {
     setTimeout(() => {
@@ -21,15 +21,15 @@ export default {
     }, 1000);
   },
   computed: {
-    ...mapState(["theData"]),
+    ...mapState(['theData']),
     computedData() {
       return this.theData;
-    }
+    },
   },
   methods: {
-    ...mapActions(["fetchImageList"])
+    ...mapActions(['fetchImageList']),
   },
-  components: { GalleryView, FileUploader }
+  components: { GalleryView, FileUploader },
 };
 </script>
 

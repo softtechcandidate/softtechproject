@@ -5,21 +5,18 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item href="#/">Home</b-nav-item>
-        <b-nav-item href="#/camera">Camera</b-nav-item> 
-      </b-navbar-nav> 
+        <b-nav-item href="#/camera">Camera</b-nav-item>
+      </b-navbar-nav>
     </b-collapse>
   </b-navbar>
 </template>
 
 <script>
-import { mapState } from 'vuex';
-
 export default {
-  name: 'Navbar', 
-  computed: { 
-  },
+  name: 'Navbar',
+  computed: { },
 };
 </script>
- 
-<style scoped lang="scss"> 
+
+<style scoped lang="scss">
 </style>

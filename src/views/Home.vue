@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import Home from "@/components/Home.vue";
-import Navbar from "@/components/Navbar";
+import Home from '@/components/Home.vue';
+import Navbar from '@/components/Navbar.vue';
 
 export default {
-  name: "HomeV",
+  name: 'HomeV',
   components: {
     Home,
-    Navbar
-  }
+    Navbar,
+  },
 };
 </script>

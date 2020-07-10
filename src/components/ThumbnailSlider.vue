@@ -12,16 +12,16 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex';
 
 export default {
-  name: "ThumbnailSlider",
+  name: 'ThumbnailSlider',
   props: {},
   computed: {
-    ...mapState(["imageList"])
+    ...mapState(['imageList']),
   },
   components: {},
-  methods: {}
+  methods: {},
 };
 </script>
 
