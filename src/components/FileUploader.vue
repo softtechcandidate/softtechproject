@@ -25,8 +25,7 @@
 import { mapActions } from 'vuex';
 
 export default {
-  name: 'GalleryView',
-  props: {},
+  name: 'FileUploader',
   data() {
     return {
       file: null,
@@ -60,7 +59,6 @@ export default {
       });
     },
   },
-  components: {},
 };
 </script>
 <style scoped lang="scss">

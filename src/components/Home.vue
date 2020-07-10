@@ -11,10 +11,7 @@ import GalleryView from './GalleryView.vue';
 import FileUploader from './FileUploader.vue';
 
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String,
-  },
+  name: 'Home', 
   created() {
     setTimeout(() => {
       this.fetchImageList();
@@ -34,6 +31,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.home {
-}
 </style>

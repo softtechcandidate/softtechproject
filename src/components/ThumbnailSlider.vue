@@ -16,12 +16,9 @@ import { mapState } from 'vuex';
 
 export default {
   name: 'ThumbnailSlider',
-  props: {},
   computed: {
     ...mapState(['imageList']),
   },
-  components: {},
-  methods: {},
 };
 </script>
 
@@ -34,9 +31,5 @@ export default {
 
 .thumnail-slider__thumb {
   cursor: pointer;
-}
-
-.inner {
-  overflow: hidden;
 }
 </style>

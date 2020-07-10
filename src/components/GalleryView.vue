@@ -11,11 +11,9 @@ import ThumbnailSlider from './ThumbnailSlider.vue';
 
 export default {
   name: 'GalleryView',
-  props: {},
   data: () => ({
     selectedSlideIndex: 0,
   }),
-  computed: {},
   methods: {
     onThumbSelected(selectionIndex) {
       this.selectedSlideIndex = selectionIndex;
@@ -25,7 +23,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .gallery-view {
   margin: 10px;

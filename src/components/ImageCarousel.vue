@@ -42,13 +42,8 @@ export default {
       this.selectedSlideIndexLocal = this.selectedSlideIndex;
     },
   },
-  components: {},
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.image-carousel {
-  // padding: 20px;
-}
 </style>

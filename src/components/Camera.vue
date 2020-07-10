@@ -29,7 +29,6 @@ let webcam;
 
 export default {
   name: 'Camera',
-  props: {},
   data() {
     return {
       snapshotBase64: null,
@@ -39,7 +38,6 @@ export default {
   mounted() {
     this.initWebcam();
   },
-  computed: {},
   methods: {
     ...mapActions(['saveBase64Image']),
     onTakeAPhotoClicked() {
@@ -92,7 +90,6 @@ export default {
   destroyed() {
     webcam.stop();
   },
-  components: {},
 };
 </script>
 

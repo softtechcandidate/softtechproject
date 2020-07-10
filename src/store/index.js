@@ -7,6 +7,7 @@ Vue.use(Vuex);
 const galleryManager = new GalleryManager();
 
 export default new Vuex.Store({
+  modules: {},
   state: {
     imageList: [],
   },
@@ -27,7 +28,5 @@ export default new Vuex.Store({
     SAVE_IMAGE_LIST(state, jsonData) {
       state.imageList = jsonData;
     },
-  },
-  modules: {
   },
 });
