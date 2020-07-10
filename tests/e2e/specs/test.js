@@ -2,20 +2,35 @@
 // https://nightwatchjs.org/guide
 
 module.exports = {
-  'default e2e tests': (browser) => {
+  'gallery header is rendered': (browser) => {
     browser
       .init()
       .waitForElementVisible('#app')
-      .assert.elementPresent('.hello')
-      .assert.containsText('h1', 'Welcome to Your Vue.js App')
-      .assert.elementCount('img', 1)
+      .assert.elementPresent('.home')
+      .assert.containsText('h1', 'Image Gallery') 
       .end();
   },
 
-  'example e2e test using a custom command': (browser) => {
+  'GalleryView component rendered': (browser) => {
     browser
-      .openHomepage()
-      .assert.elementPresent('.hello')
+      .init()
+      .waitForElementVisible('#app')
+      .assert.elementPresent('#galleryView') 
       .end();
   },
+
+  'FileUploader component rendered': (browser) => {
+    browser
+      .init()
+      .waitForElementVisible('#app')
+      .assert.elementPresent('#fileUploader') 
+      .end();
+  }, 
+
+  // 'example e2e test using a custom command': (browser) => {
+  //   browser
+  //     .openHomepage()
+  //     .assert.elementPresent('.hello')
+  //     .end();
+  // },
 };
