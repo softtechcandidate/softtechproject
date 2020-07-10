@@ -1,0 +1,18 @@
+[
+    {
+        "large": "/images/large/01.jpg",
+        "thumb": "/images/thumb/01.jpg"
+    },
+    {
+        "large": "/images/large/02.jpg",
+        "thumb": "/images/thumb/02.jpg"
+    },
+    {
+        "large": "/images/large/03.jpg",
+        "thumb": "/images/thumb/03.jpg"
+    },
+    {
+        "large": "/images/large/04.jpg",
+        "thumb": "/images/thumb/04.jpg"
+    }
+]
