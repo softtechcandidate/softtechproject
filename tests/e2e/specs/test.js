@@ -7,7 +7,7 @@ module.exports = {
       .init()
       .waitForElementVisible('#app')
       .assert.elementPresent('.home')
-      .assert.containsText('h1', 'Image Gallery') 
+      .assert.containsText('h1', 'Image Gallery')
       .end();
   },
 
@@ -15,7 +15,7 @@ module.exports = {
     browser
       .init()
       .waitForElementVisible('#app')
-      .assert.elementPresent('#galleryView') 
+      .assert.elementPresent('#galleryView')
       .end();
   },
 
@@ -23,14 +23,7 @@ module.exports = {
     browser
       .init()
       .waitForElementVisible('#app')
-      .assert.elementPresent('#fileUploader') 
+      .assert.elementPresent('#fileUploader')
       .end();
-  }, 
-
-  // 'example e2e test using a custom command': (browser) => {
-  //   browser
-  //     .openHomepage()
-  //     .assert.elementPresent('.hello')
-  //     .end();
-  // },
+  },
 };
