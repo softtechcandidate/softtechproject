@@ -19,7 +19,7 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.1.7-alpha.3",
     "install": "^0.13.0",
-    "npm": "^6.14.6",
+    "npm": "^9.8.0",
     "sharp": "^0.25.4",
     "uuidv4": "^6.1.1",
     "vue": "^2.6.11",
@@ -28,13 +28,13 @@
     "webcam-easy": "^1.0.5"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.4.0",
-    "@vue/cli-plugin-e2e-nightwatch": "~4.4.0",
-    "@vue/cli-plugin-eslint": "~4.4.0",
-    "@vue/cli-plugin-router": "~4.4.0",
-    "@vue/cli-plugin-unit-mocha": "~4.4.0",
+    "@vue/cli-plugin-babel": "~5.0.8",
+    "@vue/cli-plugin-e2e-nightwatch": "~5.0.8",
+    "@vue/cli-plugin-eslint": "~5.0.8",
+    "@vue/cli-plugin-router": "~5.0.8",
+    "@vue/cli-plugin-unit-mocha": "~5.0.8",
     "@vue/cli-plugin-vuex": "~4.4.0",
-    "@vue/cli-service": "~4.4.0",
+    "@vue/cli-service": "~5.0.8",
     "@vue/eslint-config-airbnb": "^5.0.2",
     "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
@@ -44,7 +44,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
     "geckodriver": "^1.19.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^9.0.0",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   }
